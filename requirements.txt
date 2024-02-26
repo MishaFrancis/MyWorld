@@ -1,0 +1,11 @@
+httpx==0.24.0
+psycogreen==1.0.2
+psycopg2-binary==2.9.6
+pytest==7.3.1
+pytest-check==2.1.4
+pytest-html==3.2.0
+python-dotenv==1.0.0
+jsonschema
+pytz
+pytest-xdist
+bs4
