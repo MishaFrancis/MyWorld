@@ -5,7 +5,7 @@ class Test_regression:
         print("+++++++++++++++++++++++++++++++++++")
 
     def test_02(self):
-        assert 5 == 5
+        assert 5 == 51
         print("=========333===d=======")
 
 # if __name__ == '__main__':
