@@ -5,6 +5,7 @@ class Test_regression:
     def test_01(self):
         print("+++++++++++++++++++++++++++++++++++")
 
+    @pytest.mark.smoke
     def test_02(self):
         assert 5 == 5
         print("=========333==d=d=======")
