@@ -9,3 +9,4 @@ jsonschema
 pytz
 pytest-xdist
 bs4
+ipykernel

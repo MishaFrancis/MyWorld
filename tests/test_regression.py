@@ -6,7 +6,7 @@ class Test_regression:
 
     def test_02():
         assert 5 == 5
-        print("===================")
+        print("=========333==========")
 
 # if __name__ == '__main__':
 #     Test_regression.test_01()
