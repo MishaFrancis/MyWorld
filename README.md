@@ -5,7 +5,7 @@ pytest -m smoke --html=reports.html
 
 
 ## Running the tests with the -v flag to increase verbosity shows the tests passing:
-pytest -v test_files.py
+pytest -v test_regression.py
 
 ============================= test session starts ==============================
 
@@ -22,3 +22,8 @@ test_files.py::TestIsDone::test_yes PASSED                               [ 50%]
 test_files.py::TestIsDone::test_no PASSED                                [100%]
 
 ============================== 2 passed in 0.00s ===============================
+
+## Running the tests with reports
+
+pytest -m smoke --html=reports.html
+pytest -v test_regression.py --html=reports.html
