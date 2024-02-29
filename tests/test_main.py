@@ -1,2 +1,5 @@
-def test_main():
-    assert "a string value" == "a string value"
+
+class TestIsDone:
+    
+    def test_main():
+        assert "a string value" == "a string value"
