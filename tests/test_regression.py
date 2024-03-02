@@ -1,5 +1,6 @@
 import pytest
 import os
+import requests
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -26,7 +27,12 @@ class Test_regression:
         url1 = os.getenv('url1')
         print(url1)
 
+    @pytest.mark.smoke
+    def test_05_call_an_API_and_get_data(self):
 
+        response = requests.get("https://api.open-notify.org/this-api-doesnt-exist")
+        print(response)
+        
 
 # if __name__ == '__main__':
 #     Test_regression.test_01()
