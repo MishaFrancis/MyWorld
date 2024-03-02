@@ -1,4 +1,7 @@
 import pytest
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 class Test_regression:
     @pytest.mark.smoke
@@ -16,6 +19,12 @@ class Test_regression:
 
         url = 'www.google.com'
         print (url)
+
+    @pytest.mark.smoke
+    def test_04_call_url_from_rootfile_and_print_check(self):
+
+        GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID')
+        print(GCP_PROJECT_ID)
 
 
 
