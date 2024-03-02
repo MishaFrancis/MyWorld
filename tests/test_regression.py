@@ -23,7 +23,7 @@ class Test_regression:
     @pytest.mark.smoke
     def test_04_call_url_from_dotenv_and_print_check(self):
 
-        url1 = os.getenv('url1')
+        url1 = str(os.getenv('url1'))
         print(url1)
 
 
