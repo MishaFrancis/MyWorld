@@ -1,1 +1,0 @@
-url1 = https://www.yahoo.com/

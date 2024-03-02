@@ -21,10 +21,10 @@ class Test_regression:
         print (url)
 
     @pytest.mark.smoke
-    def test_04_call_url_from_rootfile_and_print_check(self):
+    def test_04_call_url_from_dotenv_and_print_check(self):
 
-        GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID')
-        print(GCP_PROJECT_ID)
+        url1 = os.getenv('url1')
+        print(url1)
 
 
 
