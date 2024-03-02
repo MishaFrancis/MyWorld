@@ -33,7 +33,7 @@ class Test_regression:
         response = requests.get("https://api.sampleapis.com/wines/reds")
         print(response)
         print(response.status_code)
-        print(str('asdfasdf' + response.cookies))
+        print(str('asdfasdf' + str(response.cookies)))
         print(response.text)
 
 
