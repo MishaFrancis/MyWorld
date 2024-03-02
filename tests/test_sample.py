@@ -1,6 +1,7 @@
 import pytest
 
 class test_regression:
+    
     @pytest.mark.smoke
     def test_01(self):
         print("++++++++++++++++++++++++++++++++++++++++++++++++")
