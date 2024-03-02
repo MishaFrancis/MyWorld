@@ -1,6 +1,6 @@
 import pytest
 
-class tests_regressions:
+class test_regressions:
 
     @pytest.mark.smoke
     def test_01_check(self):
