@@ -1,6 +1,7 @@
 import pytest
 import os
 import requests
+import json
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -32,9 +33,10 @@ class Test_regression:
 
         response = requests.get("https://api.sampleapis.com/wines/reds")
         print(response)
-        print('The status code is:' + str(response.status_code))
+        print('The status code is ' + str(response.status_code))
         print('This is the cookie list ' + str(response.cookies))
-        print(response.text)
+        pretty_response = json.dumps(response, indent=4)
+        print(pretty_response)
 
 
 # if __name__ == '__main__':
