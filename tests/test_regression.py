@@ -2,6 +2,7 @@ import pytest
 import os
 import requests
 import json
+from pprint import pprint
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -36,7 +37,7 @@ class Test_regression:
         print('The status code is ' + str(response.status_code))
         print('This is the cookie list ' + str(response.cookies))
         pretty_response = json.dumps(response.text, indent=4)
-        print(pretty_response)
+        pprint(pretty_response)
 
 
 # if __name__ == '__main__':
