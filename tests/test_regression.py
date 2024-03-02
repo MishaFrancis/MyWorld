@@ -50,7 +50,7 @@ class Test_regression:
     @pytest.mark.api
     def test_06_send_data_with_an_API_and_check_data(self):
 
-        print('TBD')
+        print('TBD - In progress')
 
 
 # if __name__ == '__main__':
