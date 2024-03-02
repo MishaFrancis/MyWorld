@@ -7,15 +7,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Test_regression:
+
     @pytest.mark.smoke
     def test_01_Simple_print_output_check(self):
 
         print("+++++++++++++++++++++++++++++++++++")
 
+
     @pytest.mark.smoke
     def test_02_simple_assert_check(self):
 
         assert 5 == 5
+
 
     @pytest.mark.smoke
     def test_03_simple_url_print_check(self):
@@ -23,11 +26,13 @@ class Test_regression:
         url = 'www.google.com'
         print (url)
 
+
     @pytest.mark.smoke
     def test_04_call_url_from_dotenv_and_print_check(self):
 
         url1 = os.getenv('url1')
         print(url1)
+
 
     @pytest.mark.smoke
     def test_05_call_an_API_and_get_data(self):
@@ -38,6 +43,12 @@ class Test_regression:
         print('This is the cookie list ' + str(response.cookies))
         print('++++++++++++++++++++++++++++ Below is the API response +++++++++++++++++++++++++++++')
         print(response.text)
+
+
+    @pytest.mark.smoke
+    def test_06_send_data_with_an_API_and_assert_data(self):
+
+        print('TBD')
 
 
 # if __name__ == '__main__':
