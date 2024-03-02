@@ -36,7 +36,7 @@ class Test_regression:
         print(response)
         print('++++++++++++++++++++++++++++++The status code is ' + str(response.status_code) + '++++++++++++++++++++++++++++++')
         print('This is the cookie list ' + str(response.cookies))
-        print('+++++++++++++++++++++++++++++++ Below is the API response +++++++++++++++++++++++++++++++')
+        print('++++++++++++++++++++++++++++ Below is the API response ++++++++++++++++++++++++++++')
         print(response.text)
 
 
