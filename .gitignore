@@ -1,7 +1,7 @@
 .DS_Store
 .idea/
 /venv/
-/tests/results/reports.html
+/tests/reports.html
 /.pytest_cache
 /reports.html
 /tests/__pycache__/
