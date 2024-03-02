@@ -30,9 +30,9 @@ class Test_regression:
     @pytest.mark.smoke
     def test_05_call_an_API_and_get_data(self):
 
-        response = requests.get("https://api.open-notify.org/this-api-doesnt-exist")
+        response = requests.get("https://api.sampleapis.com/wines/reds")
         print(response)
-        
+
 
 # if __name__ == '__main__':
 #     Test_regression.test_01()
