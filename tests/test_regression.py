@@ -35,8 +35,9 @@ class Test_regression:
         print(response)
         print('The status code is ' + str(response.status_code))
         print('This is the cookie list ' + str(response.cookies))
-        pretty_response = json.dumps(response, indent=4)
-        print(pretty_response)
+        # pretty_response = json.dumps(response, indent=4)
+        # print(pretty_response)
+        print(response.text.json)
 
 
 # if __name__ == '__main__':
