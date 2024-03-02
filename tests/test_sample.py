@@ -3,11 +3,10 @@ import pytest
 class tests_regressions:
 
     @pytest.mark.smoke
-    def test_01_check(self):
+    def test_01_check():
 
         print("++++++++++++++++++++++++++++++++++++++++++++++++")
         assert 1 + 1 == 2
 
-
 # if __name__ == '__main__':
-#     tests_regressions.test_01()
+#     tests_regressions.test_01_check()
