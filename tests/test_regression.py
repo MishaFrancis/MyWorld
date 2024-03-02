@@ -34,10 +34,9 @@ class Test_regression:
 
         response = requests.get("https://api.sampleapis.com/wines/reds")
         print(response)
-        print('The status code is ' + str(response.status_code))
+        print('++++++++++++++++++++++++++++++The status code is ' + str(response.status_code) + '++++++++++++++++++++++++++++++')
         print('This is the cookie list ' + str(response.cookies))
-        pretty_response = json.dumps(response.text, indent=4)
-        pprint(pretty_response)
+        print(response.text)
 
 
 # if __name__ == '__main__':
