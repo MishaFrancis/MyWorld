@@ -31,6 +31,8 @@ class Test_regression:
     def test_05_call_an_API_and_get_data(self):
 
         response = requests.get("https://api.sampleapis.com/wines/reds")
+        print(response)
+        print(response.status_code)
         print(response.text)
 
 
