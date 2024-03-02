@@ -3,6 +3,9 @@ This is my world to see how version control and git/commit/push/pull works
 ## Below is the command to run with report
 pytest -m smoke --html=reports.html
 
+## Below command will suppress warnings
+pytest -v test_regression.py --html=reports.html --disable-warnings
+
 
 ## Running the tests with the -v flag to increase verbosity shows the tests passing:
 pytest -v test_regression.py
