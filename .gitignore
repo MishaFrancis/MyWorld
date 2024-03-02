@@ -4,7 +4,7 @@
 /tests/reports.html
 /.pytest_cache
 /reports.html
-/tests/__pycache__/
-__pycache__/
+/tests/__pycache__
+__pycache__
 /.env
 /file.csv
