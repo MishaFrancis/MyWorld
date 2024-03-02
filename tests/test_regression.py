@@ -9,7 +9,7 @@ load_dotenv()
 class Test_regression:
 
     @pytest.mark.smoke
-    def test_01_Simple_print_output_check(self):
+    def test_01_simple_print_output_check(self):
 
         print("+++++++++++++++++++++++++++++++++++")
 
@@ -35,6 +35,7 @@ class Test_regression:
 
 
     @pytest.mark.smoke
+    @pytest.mark.api
     def test_05_call_an_API_and_get_data(self):
 
         response = requests.get("https://api.sampleapis.com/wines/reds")
@@ -46,7 +47,8 @@ class Test_regression:
 
 
     @pytest.mark.smoke
-    def test_06_send_data_with_an_API_and_assert_data(self):
+    @pytest.mark.api
+    def test_06_send_data_with_an_API_and_check_data(self):
 
         print('TBD')
 
