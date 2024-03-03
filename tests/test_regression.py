@@ -77,7 +77,10 @@ class Test_regression:
         cursor = conn.cursor()
         query = 'SELECT * FROM users'
         cursor.execute(query)
+        
         result = cursor.fetchall()
+        print(result)
+
  
         # print the results in each row
         for r in result:
