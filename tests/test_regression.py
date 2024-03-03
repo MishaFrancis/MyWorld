@@ -77,7 +77,7 @@ class Test_regression:
         cursor = conn.cursor()
         # query = 'INSERT INTO users VALUE (RAND(),"Tom",CURTIME());'
         # cursor.execute(query)
-        query = 'SELECT * FROM users where name = Tom'
+        query = 'SELECT * FROM users where name = "Tom"'
         cursor.execute(query)
         result = cursor.fetchall()
  
