@@ -59,13 +59,14 @@ class Test_regression:
     @pytest.mark.db
     def test_07_insert_query_data_from_mysql_db_and_print(self):
 
-        conn = connect(
-        user = 'root',
-        password = 'admin',
-        host = 'localhost',
-        database = 'movies')
-#       database = 'mysql')
+#         conn = connect(
+#         user = 'root',
+#         password = 'admin',
+#         host = 'localhost',
+#         database = 'movies')
+# #       database = 'mysql')
  
+        conn = os.getenv('conn')
         print('A connection object has been created.')
 
         cursor = conn.cursor()
@@ -83,6 +84,7 @@ class Test_regression:
         for r in result:
           print(r)
     
+        # commit and close db connection
         conn.commit()
         conn.close()
 
