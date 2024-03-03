@@ -4,6 +4,7 @@ import requests
 import json
 import sqlite3
 import mysql.connector
+from mysql.connector import connect
 from pprint import pprint
 from dotenv import load_dotenv
 load_dotenv()
