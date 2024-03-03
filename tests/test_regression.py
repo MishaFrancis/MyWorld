@@ -57,7 +57,7 @@ class Test_regression:
         
         conn = mysql.connector.connect(
         host="127.0.0.1",
-        user="admin",
+        user="root",
         password="admin",
         database="mysql"
         )
