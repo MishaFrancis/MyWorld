@@ -70,7 +70,10 @@ class Test_regression:
         cursor = conn.cursor()
         
         # Below is the insert query to add data to the DB
-        query = 'INSERT INTO users VALUE (CURTIME(),char(round(rand()*25)+97),RAND());'
+        query = 'SELECT concat(char(round(rand()*25)+97),char(round(rand()*25)+97),char(round(rand()*25)+97),char(round(rand()*25)+97),char(round(rand()*25)+97),char(round(rand()*25)+97),char(round(rand()*25)+97),char(round(rand()*25)+97),char(round(rand()*25)+97),char(round(rand()*25)+97))AS Random10CharacterString';
+        cursor.execute(query)
+        result = cursor.fetchall()
+        query = 'INSERT INTO users VALUE (CURTIME(),result,RAND());'
         cursor.execute(query)
 
         # Below is the select query to check the DB
