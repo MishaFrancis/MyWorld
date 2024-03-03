@@ -63,7 +63,8 @@ class Test_regression:
         user = 'root',
         password = 'admin',
         host = 'localhost',
-        database = 'mysql')
+        database = 'movies')
+#       database = 'mysql')
  
         print('A connection object has been created.')
 
