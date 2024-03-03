@@ -71,7 +71,7 @@ class Test_regression:
         cursor = conn.cursor()
         
         # Below is the insert query to add data to the DB
-        query = 'INSERT INTO users VALUE (CURTIME(),"Tom",RAND()*100)'
+        query = 'INSERT INTO users VALUE (CURTIME(),"Tom",CURTIME())'
         cursor.execute(query)
 
         # Below is the select query to check the DB
