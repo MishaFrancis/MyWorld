@@ -63,6 +63,9 @@ class Test_regression:
         )
 
         cursor = conn.cursor()
+        
+        cursor.execute("CREATE TABLE IF NOT EXISTS users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), age INT)")
+
         conn.commit()
         conn.close()
 
