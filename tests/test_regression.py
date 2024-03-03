@@ -51,17 +51,13 @@ class Test_regression:
 
     @pytest.mark.smoke
     @pytest.mark.api
-    @pytest.mark.db
     def test_06_send_data_with_an_API_and_check_data(self):
+        print('In Progress with API')
 
-        print('TBD - In progress')
-        
-        # conn = mysql.connector.connect(
-        # host="127.0.0.1",
-        # user="root",
-        # password="admin",
-        # database="mysql"
-        # )
+
+    @pytest.mark.smoke
+    @pytest.mark.db
+    def test_07_insert_query_data_from_mysql_db_and_print(self):
 
         conn = connect(
         user = 'root',
@@ -70,13 +66,14 @@ class Test_regression:
         database = 'mysql')
  
         print('A connection object has been created.')
- 
-        # close the database connection
-        # conn.close()
 
         cursor = conn.cursor()
+        
+        # Below is the insert query to add data to the DB
         # query = 'INSERT INTO users VALUE (RAND(),"Tom",CURTIME());'
         # cursor.execute(query)
+
+        # Below is the select query to check the DB
         query = 'SELECT * FROM users where name = "Tom"'
         cursor.execute(query)
         result = cursor.fetchall()
