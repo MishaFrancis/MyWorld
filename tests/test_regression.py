@@ -63,6 +63,17 @@ class Test_regression:
         database="mysql"
         )
 
+        conn = connect(
+        user = 'root',
+        password = 'admin',
+        host = 'localhost',
+        database = 'mysql')
+ 
+        print('A connection object has been created.')
+ 
+        # close the database connection
+        conn.close()
+
         cursor = conn.cursor()
         query = 'SELECT * FROM users'
         cursor.execute(query)
