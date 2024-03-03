@@ -75,7 +75,7 @@ class Test_regression:
         # conn.close()
 
         cursor = conn.cursor()
-        query = 'SELECT * FROM movies'
+        query = 'SELECT * FROM users'
         cursor.execute(query)
         result = cursor.fetchall()
  
