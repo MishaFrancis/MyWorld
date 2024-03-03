@@ -75,7 +75,7 @@ class Test_regression:
         # conn.close()
 
         cursor = conn.cursor()
-        query = 'INSERT INTO users VALUE ("4","john",CURTIME());'
+        query = 'INSERT INTO users VALUE ("1","john",CURTIME());'
         cursor.execute(query)
         query = 'SELECT * FROM users'
         cursor.execute(query)
