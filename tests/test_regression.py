@@ -70,7 +70,7 @@ class Test_regression:
         print('A connection object has been created.')
 
         cursor = conn.cursor()
-        print('++++++++++++++++' + cursor)
+        print(cursor)
         
         # Below is the insert query to add data to the DB
         query = 'INSERT INTO users VALUE (CURTIME(),"Tom",CURTIME())'
