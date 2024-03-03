@@ -2,6 +2,7 @@ import pytest
 import os
 import requests
 import json
+import sqlite3
 from pprint import pprint
 from dotenv import load_dotenv
 load_dotenv()
@@ -48,9 +49,14 @@ class Test_regression:
 
     @pytest.mark.smoke
     @pytest.mark.api
+    @pytest.mark.db
     def test_06_send_data_with_an_API_and_check_data(self):
 
         print('TBD - In progress')
+        conn = sqlite3.connect('mysql.db')
+        cursor = conn.cursor()
+        cursor.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)")
+
 
 
 # if __name__ == '__main__':
