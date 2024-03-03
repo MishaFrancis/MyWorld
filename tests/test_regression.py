@@ -72,19 +72,19 @@ class Test_regression:
         print('A connection object has been created.')
  
         # close the database connection
-        conn.close()
-
-        # cursor = conn.cursor()
-        # query = 'SELECT * FROM users'
-        # cursor.execute(query)
-        # result = cursor.fetchall()
- 
-        # # print the results in each row
-        # for r in result:
-        #   print(r)
-    
-        # conn.commit()
         # conn.close()
+
+        cursor = conn.cursor()
+        query = 'SELECT * FROM users'
+        cursor.execute(query)
+        result = cursor.fetchall()
+ 
+        # print the results in each row
+        for r in result:
+          print(r)
+    
+        conn.commit()
+        conn.close()
 
 
 
