@@ -3,6 +3,7 @@ import os
 import requests
 import json
 import sqlite3
+import mysql.connector
 from pprint import pprint
 from dotenv import load_dotenv
 load_dotenv()
@@ -53,9 +54,18 @@ class Test_regression:
     def test_06_send_data_with_an_API_and_check_data(self):
 
         print('TBD - In progress')
-        conn = sqlite3.connect('mysql.db')
+        
+        conn = mysql.connector.connect(
+        host="127.0.0.1",
+        user="admin",
+        password="admin",
+        database="mysql"
+        )
+
         cursor = conn.cursor()
-        cursor.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)")
+        conn.commit()
+        conn.close()
+
 
 
 
