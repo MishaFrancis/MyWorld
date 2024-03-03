@@ -66,10 +66,10 @@ class Test_regression:
 #         database = 'movies')
 # #       database = 'mysql')
  
-        conn = str(os.getenv('conn'))
+        conn = os.getenv('conn')
         print('A connection object has been created.')
 
-        cursor = conn.cursor()
+        cursor = str(conn.cursor())
         
         # Below is the insert query to add data to the DB
         query = 'INSERT INTO users VALUE (CURTIME(),"Tom",CURTIME())'
