@@ -56,12 +56,12 @@ class Test_regression:
 
         print('TBD - In progress')
         
-        conn = mysql.connector.connect(
-        host="127.0.0.1",
-        user="root",
-        password="admin",
-        database="mysql"
-        )
+        # conn = mysql.connector.connect(
+        # host="127.0.0.1",
+        # user="root",
+        # password="admin",
+        # database="mysql"
+        # )
 
         conn = connect(
         user = 'root',
@@ -74,17 +74,17 @@ class Test_regression:
         # close the database connection
         conn.close()
 
-        cursor = conn.cursor()
-        query = 'SELECT * FROM users'
-        cursor.execute(query)
-        result = cursor.fetchall()
+        # cursor = conn.cursor()
+        # query = 'SELECT * FROM users'
+        # cursor.execute(query)
+        # result = cursor.fetchall()
  
-        # print the results in each row
-        for r in result:
-          print(r)
+        # # print the results in each row
+        # for r in result:
+        #   print(r)
     
-        conn.commit()
-        conn.close()
+        # conn.commit()
+        # conn.close()
 
 
 
