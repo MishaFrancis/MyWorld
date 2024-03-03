@@ -66,7 +66,7 @@ class Test_regression:
 #         database = 'movies')
 # #       database = 'mysql')
  
-        conn = os.getenv('conn')
+        conn = str(os.getenv('conn'))
         print('A connection object has been created.')
 
         cursor = conn.cursor()
