@@ -62,7 +62,7 @@ class Test_regression:
                    headers={"Content-Type": "application/json"},
                    )
 
-        print(response.json())
+        print(response.text)
 
 
     @pytest.mark.smoke
