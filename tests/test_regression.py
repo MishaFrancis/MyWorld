@@ -59,22 +59,13 @@ class Test_regression:
     @pytest.mark.db
     def test_07_insert_query_data_from_mysql_db_and_print(self):
 
-#         conn = connect(
-#         user = 'root',
-#         password = 'admin',
-#         host = 'localhost',
-#         database = 'movies')
-# #       database = 'mysql')
-        # ++++++++++
-    
-        user = 'root'
-        password = 'admin'
-        host = 'localhost'
-        database = 'movies'
+        conn = connect(
+        user = 'root',
+        password = 'admin',
+        host = 'localhost',
+        database = 'movies')
+#       database = 'mysql')
 
-        conn = str(connect(user, password, host,database))
-
-# ++++++++++
         print('A connection object has been created.')
 
         cursor = conn.cursor()
