@@ -33,8 +33,7 @@ class Test_regression:
     @pytest.mark.smoke
     def test_04_call_url_from_dotenv_and_print_check(self):
 
-        # url1 = os.getenv('url1')
-        url1 = os.environ.get('url1')
+        url1 = os.getenv('url1')
         print(url1)
 
 
@@ -61,7 +60,7 @@ class Test_regression:
     def test_07_insert_query_data_from_mysql_db_and_print(self):
 
         conn = connect(
-        user = 'root',
+        user = os.getenv('user'),
         password = 'admin',
         host = 'localhost',
         database = 'movies')
