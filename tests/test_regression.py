@@ -55,14 +55,13 @@ class Test_regression:
     @pytest.mark.api
     def test_06_send_data_with_an_API_and_check_data(self):
 
-        print('In Progress with API')
-
         response = requests.post("https://httpbin.org/post", 
-                   data={"key": "value"},
-                   headers={"Content-Type": "application/json"},
-                   )
+                                data={"key": "value"},
+                                headers={"Content-Type": "application/json"},
+                                )
 
         print(response.json())
+        print('++++++++++++++++++++++++++++++ The status code is ' + str(response.status_code) + ' ++++++++++++++++++++++++++++++')
 
 
     @pytest.mark.smoke
