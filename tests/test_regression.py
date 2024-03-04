@@ -72,7 +72,7 @@ class Test_regression:
         host = 'localhost'
         database = 'movies'
 
-        conn = connect(user, password, host,database)
+        conn = str(connect(user, password, host,database))
 
 # ++++++++++
         print('A connection object has been created.')
