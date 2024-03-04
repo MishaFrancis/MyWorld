@@ -9,7 +9,6 @@ import mysql
 import mysql.connector
 from pprint import pprint
 from dotenv import load_dotenv
-from mydb import db_connect
 load_dotenv()
 
 class Test_regression:
@@ -63,12 +62,10 @@ class Test_regression:
     def test_07_insert_query_data_from_mysql_db_and_print(self):
 
         conn = connect(
-        user = 'root',
-        password = 'admin',
-        host = 'localhost',
-        database = 'movies')
-#       database = 'mysql')
-
+        user = os.getenv('user'),
+        password = os.getenv('password'),
+        host = os.getenv('host'),
+        database = os.getenv('database'))
         print('A connection object has been created.')
 
         cursor = conn.cursor()
