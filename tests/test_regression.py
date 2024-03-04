@@ -61,10 +61,9 @@ class Test_regression:
 
         conn = connect(
         user = os.getenv('user'),
-        password = 'admin',
-        host = 'localhost',
-        database = 'movies')
-#       database = 'mysql')
+        password = os.getenv('password'),
+        host = os.getenv('host'),
+        database = os.getenv('database'))
         print('A connection object has been created.')
 
         cursor = conn.cursor()
