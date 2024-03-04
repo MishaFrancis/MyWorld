@@ -1,10 +1,12 @@
-# from mysql.connector import connect
+import os
+from mysql import connector
 
 
-# class mydb:
-#     def db_connect():
-#         conn = connect(
-#            user = 'root',
-#            password = 'admin',
-#            host = 'localhost',
-#            database = 'movies')
+def db_connect(self):
+        conn = connector(
+        user = os.getenv('user'),
+        password = os.getenv('password'),
+        host = os.getenv('host'),
+        database = os.getenv('database'))
+        print('A connection object has been created.')
+
