@@ -57,8 +57,8 @@ class Test_regression:
 
         print('In Progress with API')
 
-        response = requests.post("https://dummy.restapiexample.com/", 
-                   data={"key": "value"},
+        response = requests.post("https://dummy.restapiexample.com/api/v1/create", 
+                   data={"name":"test","salary":"123","age":"23"},
                    headers={"Content-Type": "application/json"},
                    )
 
