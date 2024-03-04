@@ -75,8 +75,7 @@ class Test_regression:
         cursor.execute(query)
 
         # Below is the select query to check the DB
-        name = "Tom"
-        query = 'SELECT * FROM users WHERE name = {name}'
+        query = 'SELECT * FROM users WHERE name = "Tom"'
         cursor.execute(query)
         result = cursor.fetchall()
  
