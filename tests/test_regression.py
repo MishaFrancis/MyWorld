@@ -57,12 +57,12 @@ class Test_regression:
 
         print('In Progress with API')
 
-        response = requests.post("https://dummy.restapiexample.com/api/v1/create", 
-                   data={"name":"test","salary":"123","age":"23"},
+        response = requests.post("https://dummy.restapiexample.com/", 
+                   data={"key": "value"},
                    headers={"Content-Type": "application/json"},
                    )
 
-        print(response.text)
+        print(response.json())
 
 
     @pytest.mark.smoke
