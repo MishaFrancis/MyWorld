@@ -63,13 +63,15 @@ class Test_regression:
     def test_07_insert_query_data_from_mysql_db_and_print(self):
 
         conn = connect(
-        user = os.getenv('user'),
-        password = os.getenv('password'),
-        host = os.getenv('host'),
-        database = os.getenv('database'))
+        user = 'root',
+        password = 'admin',
+        host = 'localhost',
+        database = 'movies')
+#       database = 'mysql')
+
         print('A connection object has been created.')
 
-        cursor = mysql.connector.Connect.cursor()
+        cursor = conn.cursor()
         
         # Below is the insert query to add data to the DB
         query = 'INSERT INTO users VALUE (CURTIME(),"Tom",CURTIME())'
