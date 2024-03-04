@@ -1,4 +1,5 @@
 from mysql import connector
+from mysql.connector.pooling import connect
 import pytest
 import os
 import requests
@@ -6,7 +7,6 @@ import json
 import sqlite3
 import mysql
 import mysql.connector
-from mysql.connector import Connect, connect
 from pprint import pprint
 from dotenv import load_dotenv
 from mydb import db_connect
@@ -62,23 +62,14 @@ class Test_regression:
     @pytest.mark.db
     def test_07_insert_query_data_from_mysql_db_and_print(self):
 
-        # conn = connect(
-        # user = os.getenv('user'),
-        # password = os.getenv('password'),
-        # host = os.getenv('host'),
-        # database = os.getenv('database'))
-        # print('A connection object has been created.')
-        def db_connect(self):
-            conn = connector(
-               user = os.getenv('user'),
-               password = os.getenv('password'),
-               host = os.getenv('host'),
-               database = os.getenv('database'))
-            print('A connection object has been created.')
+        conn = connect(
+        user = os.getenv('user'),
+        password = os.getenv('password'),
+        host = os.getenv('host'),
+        database = os.getenv('database'))
+        print('A connection object has been created.')
 
-        db_connect()
-
-        cursor = Connect.cursor()
+        cursor = mysql.connector.Connect.cursor()
         
         # Below is the insert query to add data to the DB
         query = 'INSERT INTO users VALUE (CURTIME(),"Tom",CURTIME())'
