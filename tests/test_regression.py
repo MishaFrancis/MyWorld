@@ -65,7 +65,6 @@ class Test_regression:
         host = 'localhost',
         database = 'movies')
 #       database = 'mysql')
-
         print('A connection object has been created.')
 
         cursor = conn.cursor()
