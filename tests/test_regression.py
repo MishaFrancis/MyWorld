@@ -16,7 +16,7 @@ class Test_regression:
     @pytest.mark.smoke
     def test_01_simple_print_output_check(self):
 
-        print("++++++++++++++++nbnb+++++++++++++++++++")
+        print("++++++++++++++++ Hello world ! +++++++++++++++++++")
 
 
     @pytest.mark.smoke
