@@ -7,7 +7,6 @@ import json
 import sqlite3
 import mysql
 import mysql.connector
-import test_urls
 from pprint import pprint
 from dotenv import load_dotenv
 load_dotenv()
@@ -38,9 +37,6 @@ class Test_regression:
 
         url1 = os.getenv('url1')
         print(url1)
-
-        url123 = url123
-        print(url123)
 
 
     @pytest.mark.smoke
@@ -102,5 +98,5 @@ class Test_regression:
 
 
 # if __name__ == '__main__':
-#     Test_regression.test_01()
+    # test_04_call_url_from_dotenv_and_print_check()
 #     Test_regression.test_02()
