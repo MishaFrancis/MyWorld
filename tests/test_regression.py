@@ -7,6 +7,7 @@ import json
 import sqlite3
 import mysql
 import mysql.connector
+import test1
 from pprint import pprint
 from dotenv import load_dotenv
 load_dotenv()
@@ -43,7 +44,7 @@ class Test_regression:
     @pytest.mark.api
     def test_05_call_an_API_and_get_data_from_another_file(self):
 
-        url = test1.url                             # Read data from another file(test1.py)
+        url = test_urls.url                        # Read data from another file(test_urls.py)
         print(url)
      
         with open('test/asdf.json', 'r') as f:     # Load the data from the file
