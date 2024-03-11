@@ -47,7 +47,7 @@ class Test_regression:
         url = test_urls.url                        # Read data from another file(test_urls.py)
         print(url)
      
-        with open('tests/json_file.json', 'r') as f:     # Load the data from the file
+        with open('tests/json_file.json', 'r') as f:     # Load the data from the file(json_file.json)
             data = json.load(f)
         print(data['url'])
         print(data['url1'])
