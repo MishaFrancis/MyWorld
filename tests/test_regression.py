@@ -7,7 +7,7 @@ import json
 import sqlite3
 import mysql
 import mysql.connector
-import test1
+import test_urls
 from pprint import pprint
 from dotenv import load_dotenv
 load_dotenv()
