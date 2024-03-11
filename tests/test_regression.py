@@ -41,7 +41,20 @@ class Test_regression:
 
     @pytest.mark.smoke
     @pytest.mark.api
-    def test_05_call_an_API_and_get_data(self):
+    def test_05_call_an_API_and_get_data_from_another_file(self):
+
+        url = test1.url                             # Read data from another file(test1.py)
+        print(url)
+     
+        with open('test/asdf.json', 'r') as f:     # Load the data from the file
+            data = json.load(f)
+        print(data['url'])
+        print(data['url1'])
+    
+
+    @pytest.mark.smoke
+    @pytest.mark.api
+    def test_06_call_an_API_and_get_data(self):
 
         response = requests.get("https://api.sampleapis.com/wines/reds")
         print(response)
@@ -49,11 +62,11 @@ class Test_regression:
         print('This is the cookie list ' + str(response.cookies))
         print('++++++++++++++++++++++++++++ Below is the API response +++++++++++++++++++++++++++++')
         print(response.text)
-
+    
 
     @pytest.mark.smoke
     @pytest.mark.api
-    def test_06_send_data_with_an_API_and_check_data(self):
+    def test_07_send_data_with_an_API_and_check_data(self):
 
         response = requests.post("https://httpbin.org/post", 
                                 data={"key": "value"},
@@ -66,7 +79,7 @@ class Test_regression:
 
     @pytest.mark.smoke
     @pytest.mark.db
-    def test_07_insert_query_data_from_mysql_db_and_print(self):
+    def test_08_insert_query_data_from_mysql_db_and_print(self):
 
         conn = connect(
         user = os.getenv('user'),
