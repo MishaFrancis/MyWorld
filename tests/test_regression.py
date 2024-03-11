@@ -112,5 +112,5 @@ class Test_regression:
 
 
 # if __name__ == '__main__':
-    # test_04_call_url_from_dotenv_and_print_check()
-#     Test_regression.test_02()
+#     obj = Test_regression()
+#     obj.test_05_call_an_API_and_get_data_from_another_file()
