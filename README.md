@@ -1,4 +1,4 @@
-This is my world to see how version control and git/commit/push/pull works
+# This is my world to see how version control and git/commit/push/pull works with Python/Pytest
 
 ## Below is the command to run with report
 pytest -m smoke --html=reports.html
