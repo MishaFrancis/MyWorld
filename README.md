@@ -31,5 +31,5 @@ test_files.py::TestIsDone::test_no PASSED                                [100%]
 pytest -m smoke --html=reports.html
 pytest -v test_regression.py --html=reports.html
 
-# Run tests in parallel
+## Run tests in parallel
 pytest -v test_regression.py --html=reports.html --disable-warnings --numprocesses 6
