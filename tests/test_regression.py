@@ -108,6 +108,20 @@ class Test_regression:
         conn.commit()
         conn.close()
 
+    @pytest.mark.smoke
+    def test_09_sort_assert_check(self):
+
+        # Define an array
+        my_array = [5, 2, 7, 3, 1, 9, 2, 0]
+
+        # Sort the array using sort() method
+        my_array.sort()
+
+        # Remove duplicate values using set() method
+        my_array = set(my_array)
+
+        # Print the sorted array with unique values
+        print("Sorted array with unique values:", my_array)
 
 
 
